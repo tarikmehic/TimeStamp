@@ -1,0 +1,9 @@
+<template name="Project">
+    <article class="project">
+        <h3>{{name}}</h3>
+        <p>{{description}}</p>
+        <p>{{#each workingHour}}
+            <span class = "workingHour">{{name}} - {{hoursOfWorkDone}}</span>
+        {{/each}}</p>
+    </article>
+</template>

@@ -20,9 +20,22 @@ workingHours = new SimpleSchema({
 
 projectsSchema = new SimpleSchema({
 
+    PersonAssignedTheProject: {
+        type: String,
+        autoValue: function () {
+            return this.userId
+
+        },
+
+        autoform:{
+            type: "hidden"
+        }
+
+    },
+
     name: {
         type: String,
-        label: "Name"
+        label: "Name of the project"
     },
 
     desc: {
@@ -34,15 +47,19 @@ projectsSchema = new SimpleSchema({
       type: [workingHours]
     },
 
-    client: {
-        type: String,
-        label: "Client",
-        autoValue: function () {
-
-            return this.userId
-
-
+    workingOnThisProject: {
+      type: Boolean,
+        defaultValue: false,
+        optional: true,
+        autoform:{
+          type: "hidden"
         }
+    },
+
+    Client: {
+        type: String,
+        label: "Client"
+
     },
 
     createdAt:{

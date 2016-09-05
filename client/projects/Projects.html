@@ -1,3 +1,14 @@
 <template name="Projects">
     {{> newProject}}
+
+    <section class="projects">
+        {{#if Template.subscriptionsReady}}
+        {{#each projects}}
+            {{> Project}}
+        {{/each}}
+    {{else}}
+        <p>Loading</p>
+    {{/if}}
+    </section>
+
 </template>

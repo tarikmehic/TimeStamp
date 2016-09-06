@@ -9,7 +9,7 @@ Projects.allow({
 });
 
 workingHours = new SimpleSchema({
-    name: {
+    descriptionOfTask: {
         type: String
     },
 
@@ -34,13 +34,8 @@ projectsSchema = new SimpleSchema({
     },
 
     name: {
-        type: String,
+        type: String ,
         label: "Name of the project"
-    },
-
-    desc: {
-        type: String,
-        label: "Description"
     },
 
     workingHour: {
@@ -64,7 +59,7 @@ projectsSchema = new SimpleSchema({
 
     createdAt:{
         type: Date,
-        label: "Singed at: ",
+        label: "Started project at: ",
         autoValue: function () {
 
             return new Date()

@@ -1,10 +1,5 @@
 <template name="Project">
-    <article class="project">
-        <h3>{{name}}</h3>
-        <p>{{description}}</p>
-        <p>{{#each workingHour}}
-            <span class = "workingHour">{{name}} - {{hoursOfWorkDone}}</span>
-        {{/each}}</p>
-        <a href="/project/{{_id}}">View Details</a>
+    <article class="project {{#if workingOnThisProject}}log-hours{{/if}}">
+        <h3>{{name}} - <a href="/project/{{_id}}">View Details</a></h3>
     </article>
 </template>

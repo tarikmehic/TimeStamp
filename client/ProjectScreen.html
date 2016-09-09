@@ -1,8 +1,9 @@
 <template name="ProjectScreen">
-
+    {{>newProject}}
     <h1 class="page-title">Our projects</h1>
     {{#each projects}}
-        <h1>{{name}}</h1>
+        <h1><a href="/project-selection/:_id"> {{name}}</a></h1>
     {{/each}}
 
 </template>
+

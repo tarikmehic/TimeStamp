@@ -2,14 +2,14 @@ Template.Projects.onCreated(function () {
 
     var self = this;
     self.autorun(function () {
-        self.subscribe('projects');
+        self.subscribe('tasks');
     });
 
 });
 
 Template.Projects.helpers({
-    projects: ()=> {
+    tasks: ()=> {
 
-        return Projects.find({});
+        return Tasks.find({});
     }
 });

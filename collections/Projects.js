@@ -14,16 +14,6 @@ Projects.allow({
     }
 });
 
-workingHours = new SimpleSchema({
-    nameOfTheTask: {
-        type: String
-    },
-
-    hoursOfWorkDone: {
-        type: Number
-    }
-});
-
 projectsSchema = new SimpleSchema({
 
     PersonAssignedTheProject: {
@@ -39,20 +29,6 @@ projectsSchema = new SimpleSchema({
 
     },
 
-    // projectId: {
-    //     type: String,
-    //     autoValue: function () {
-    //         return this.projectId
-    //
-    //     },
-    //
-    //     autoform:{
-    //         type: "hidden"
-    //     }
-    //
-    // },
-
-
     name: {
         type: String ,
         label: "Name of the project"
@@ -60,27 +36,13 @@ projectsSchema = new SimpleSchema({
 
     desc: {
         type: String ,
-        label: "Description of the completed task"
+        label: "Description of the project"
     },
 
-
-    workingHour: {
-      type: [workingHours]
-    },
-
-    workingOnThisProject: {
-      type: Boolean,
-        defaultValue: false,
-        optional: true,
-        autoform:{
-          type: "hidden"
-        }
-    },
 
     Client: {
         type: String,
         label: "Client"
-
     },
 
     createdAt:{
@@ -104,4 +66,4 @@ projectsSchema = new SimpleSchema({
         }
 });
 
-Projects.attachSchema( projectsSchema );
+Projects.attachSchema(projectsSchema);

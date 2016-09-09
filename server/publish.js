@@ -3,8 +3,18 @@ Meteor.publish('projects', function projectsPublication() {
 
     });
 
-Meteor.publish('singleProject', function projectsPublication(id) {
+Meteor.publish('tasks', function taskManager() {
+    return Tasks.find({});
+});
+
+Meteor.publish('singleTask', function projectsPublication(id) {
     check(id,String);
-    return Projects.find({_id : id});
+    return Tasks.find({_id : id});
+
+});
+
+Meteor.publish('tasks', function projectsPublication(id) {
+    check(id,String);
+    return Tasks.find({});
 
 });

@@ -169,15 +169,6 @@ p
     &:hover
       background @background - 40
       border-color @background
-
-    &.btn-1
-    background transparent
-    border: 0
-    color dark-purp
-    &:hover
-      background @background - 40
-      border-color @background
-
   &.btn-deny
     background red
     border solid 3px @background
@@ -317,17 +308,31 @@ input, select, textarea
 
 .project
   background #FFF
-  padding 0 20px
+  padding 0 20px 20px
+  margin-bottom 20px
   position relative
   z-index 1
   shadow-level(1)
   trans()
+  .remove-from-menu
+    display none
+  &.in-menu
+    background teal
+    color #FFF
+    h3
+      border-bottom: rgba(255,255,255, 0.6) solid 3px
+    .add-to-menu
+      display none
+    .remove-from-menu
+      display block
   h3
-    font-size: 18px;
-    color: black;
+    font-size: 1.2em;
+    opacity: 0.3;
+    border-bottom: rgba(0,0,0, 0.3) solid 3px
     margin-top 0
+    margin-bottom 10px
   button
-    margin-top 20 px
+    margin-top 20px
   .fa-trash
     opacity 0.3
     cursor pointer
@@ -342,7 +347,7 @@ input, select, textarea
     &:hover
       color red
       opacity 0.6
-  .workingHour
+  .release
     display inline-block
     margin-right 10px
     font-size 1.2em
@@ -363,7 +368,7 @@ input, select, textarea
     transform translate3d(0, 0, 0)
 
 
-.log-hours
+.menu-item
   @extend .project
 
 .shopping-list

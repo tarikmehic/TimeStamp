@@ -1,9 +1,9 @@
 <template name="Projects">
-    {{> newProject}}
+    {{> newTask}}
 
     <section class="projects">
         {{#if Template.subscriptionsReady}}
-        {{#each projects}}
+        {{#each tasks}}
             {{> Project}}
         {{/each}}
     {{else}}

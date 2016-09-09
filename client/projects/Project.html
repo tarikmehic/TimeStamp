@@ -1,5 +1,6 @@
 <template name="Project">
-    <article class="project {{#if workingOnThisProject}}log-hours{{/if}}">
-        <h3>{{name}} - <a href="/project/{{_id}}">View Details</a></h3>
+    <article class="project">
+        <h3>{{name}} -  <a href="/task/{{_id}}">View task details</a> </h3>
+        <p>{{desc}} </p>
     </article>
 </template>

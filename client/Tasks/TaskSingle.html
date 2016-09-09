@@ -1,0 +1,13 @@
+<template name="TaskSingle">
+
+            <h1>{{task.name}}</h1>
+            <h2>{{task.tasksDoneAt}}</h2>
+            <p>{{task.desc}}</p>
+    <p>{{#each task.workingHour}}
+        <br>
+        <span class="workingH">{{segmentOfTheTask}} - {{hoursOfWorkDone}}</span>
+    {{/each}}
+    </p>
+
+
+</template>

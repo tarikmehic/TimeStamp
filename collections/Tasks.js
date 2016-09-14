@@ -46,7 +46,7 @@ tasksSchema = new SimpleSchema({
 
     desc: {
         type: String ,
-        label: "Description of the project"
+        label: "Description of the task"
     },
 
 
@@ -56,7 +56,7 @@ tasksSchema = new SimpleSchema({
 
     tasksDoneAt:{
         type: Date,
-        label: "Started project at: ",
+        label: "Task completed at: ",
         autoValue: function () {
 
             return new Date()
@@ -66,5 +66,12 @@ tasksSchema = new SimpleSchema({
     }
 });
 
+Meteor.methods({
+    deleteTask: function (id) {
+
+        Tasks.remove(id);
+
+    }
+});
 
 Tasks.attachSchema( tasksSchema );

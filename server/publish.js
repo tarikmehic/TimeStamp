@@ -18,3 +18,9 @@ Meteor.publish('tasks', function projectsPublication(id) {
     return Tasks.find({});
 
 });
+
+Meteor.publish('assignedProject', function projectsAssigned(id) {
+    check(id,String);
+    return Projects.find({});
+
+});

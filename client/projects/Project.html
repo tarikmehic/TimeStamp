@@ -1,6 +1,12 @@
 <template name="Project">
     <article class="project">
         <h3>{{name}} -  <a href="/task/{{_id}}">View task details</a> </h3>
-        <p>{{desc}} </p>
+        <i class="fa fa-trash"></i>
+        <p>{{#each workingHour}}
+            <span class="workingH">{{segmentOfTheTask}} - {{hoursOfWorkDone}}  |</span>
+        {{/each}}
+        </p>
+
+        {{> quickForm collection = "Tasks" id = updateTaskId type = "update" doc = this}}
     </article>
 </template>

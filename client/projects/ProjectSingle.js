@@ -3,12 +3,12 @@ Template.ProjectSingle.onCreated(function () {
     var self = this;
     self.autorun(function () {
         var id = FlowRouter.getParam('id');
-        self.subscribe('singleTask', id);
+        self.subscribe('assignedProject', id);
     });
 });
 Template.ProjectSingle.helpers({
-    task: ()=> {
+    projects: ()=> {
         var id = FlowRouter.getParam('id');
-        return Tasks.findOne({_id: id});
+        return Projects.findOne({_id: id});
     }
 });

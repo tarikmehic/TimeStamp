@@ -7,7 +7,7 @@ Template.ProjectScreen.onCreated(function () {
 
 });
 
-Template.ProjectSingle.helpers({
+Template.ProjectScreen.helpers({
     projects: ()=> {
         return Projects.find({});
     }
